@@ -12,7 +12,7 @@ if(isset($_POST["height"]) && isset($_POST["weight"])){
     $weight = $_POST["weight"];
     $height = $_POST["height"];
     $bmi = $weight/($height * $height);
-    echo "chỉ số bmi của bạn:".$bmi;
+    echo "chỉ số bmi của bạn:".$bmi."<br>";
     if($bmi<18.5){
         echo"bạn thuộc loại gầy";
     } elseif ($bmi>=18.5 && $bmi<=24.9){
