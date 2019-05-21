@@ -7,9 +7,10 @@
 </head>
 <body>
 <?php
+$weight=$height='';
 if(isset($_POST["height"])&&isset($_POST["weight"])){
-    $weight=(int) $_POST["weight"];
-    $height=(int) $_POST["height"];
+    $weight= $_POST["weight"];
+    $height=$_POST["height"];
     $bmi=$weight/($height *$height);
     echo "chỉ số pmi".$bmi;
 }
@@ -21,13 +22,13 @@ if(isset($_POST["height"])&&isset($_POST["weight"])){
             <h3>Tính chỉ số bmi</h3>
             <form name="bmi" method="post">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Chieu cao(cm)</label>
-                    <input type="text" class="form-control"  name="height" value="">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <label for="exampleInputEmail1">Chiều cao(m)</label>
+                    <input type="text" class="form-control"  name="height" value="<?php echo $height ?>">
+
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Can nang(kg)</label>
-                    <input type="password" class="form-control" name="weight">
+                    <label for="exampleInputPassword1">Cân nặng(kg)</label>
+                    <input type="password" class="form-control" name="weight" value="<?php echo $height ?>">
                 </div>
                 <button type="submit" name="calo" class="btn btn-primary">Tính</button>
             </form>
