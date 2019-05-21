@@ -8,11 +8,24 @@
 <body>
 <?php
 $weight=$height='';
-if(isset($_POST["height"])&&isset($_POST["weight"])){
-    $weight= $_POST["weight"];
-    $height=$_POST["height"];
-    $bmi=$weight/($height *$height);
-    echo "chỉ số pmi".$bmi;
+if(isset($_POST["height"]) && isset($_POST["weight"])){
+    $weight = $_POST["weight"];
+    $height = $_POST["height"];
+    $bmi = $weight/($height * $height);
+    echo "chỉ số bmi của bạn:".$bmi;
+    if($bmi<18.5){
+        echo"bạn thuộc loại gầy";
+    } elseif ($bmi>=18.5 && $bmi<=24.9){
+        echo"bạn thuộc loại bình thường";
+    }elseif ($bmi>=25 && $bmi<=29.9){
+        echo"bạn thuộc loại hơi béo";
+    }elseif ($bmi>=30 && $bmi<=34.9){
+        echo"bạn thuộc loại béo phì cấp độ 1";
+    }elseif ($bmi>=35 && $bmi<=39.9){
+        echo"bạn thuộc loại béo phì cấp độ 2";
+    }elseif ($bmi>=40){
+        echo"bạn thuộc loại béo phì cấp độ 3";
+    }
 }
 ?>
 
