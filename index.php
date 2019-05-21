@@ -28,7 +28,7 @@ if(isset($_POST["height"])&&isset($_POST["weight"])){
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Cân nặng(kg)</label>
-                    <input type="password" class="form-control" name="weight" value="<?php echo $height ?>">
+                    <input type="text" class="form-control" name="weight" value="<?php echo $height ?>">
                 </div>
                 <button type="submit" name="calo" class="btn btn-primary">Tính</button>
             </form>
